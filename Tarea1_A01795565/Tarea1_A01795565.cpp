@@ -39,7 +39,7 @@ int main()
     imprimeArreglo(c);     
 }
 void imprimeArreglo(float* d) {
-    // Funcion para imprimir arreglo que se recibe como parametro tetetet
+    // Funcion para imprimir arreglo que se recibe como parametro
     for (int i = 0; i < show; i++) {
         std::cout << d[i] << " - ";
     }
