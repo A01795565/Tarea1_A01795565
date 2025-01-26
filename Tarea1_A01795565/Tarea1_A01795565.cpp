@@ -22,7 +22,7 @@ int main()
         a[i] = i * 10;           // Llenamos A con valores
         b[i] = (i + 3) * 3.7;    // Llenamos B con valores 
     }
-    // Usamos OpenMP para paralelizar la suma  
+    // Usamos OpenMP para paralelizar la suma
     #pragma omp parallel for \
     shared(a,b,c,pedazos) private(i) \
     schedule(static, pedazos)
@@ -30,7 +30,6 @@ int main()
     for (i = 0; i < N; i++) {
         c[i] = a[i] + b[i];     // Sumamos los elementos en los mismos índices
     }
-
     // Imprimimos los resultados
     std::cout << "Imprimiendo los primeros : " << show << " valores del arreglo a: " << std::endl;
     imprimeArreglo(a);
@@ -40,6 +39,7 @@ int main()
     imprimeArreglo(c);     
 }
 void imprimeArreglo(float* d) {
+    // Funcion para imprimir arreglo que se recibe como parametro tetetet
     for (int i = 0; i < show; i++) {
         std::cout << d[i] << " - ";
     }
